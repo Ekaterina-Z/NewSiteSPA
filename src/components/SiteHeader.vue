@@ -1,13 +1,11 @@
 <template>
   <header class="header center">
     <div class="header__left">
-      <a href="index.html" class="logo"
-        ><img
-          class="logo__img"
-          src="./assets/img/logo.png"
-          alt="logo"
-        />BRAN<span>D</span></a
-      >
+      <a href="index.html" class="logo">
+        <img class="logo__img" src="@/assets/img/logo.png" alt="logo" />
+        BRAN
+        <span>D</span>
+      </a>
       <form class="header__form" action="#">
         <details class="header__browse">
           <summary>Browse</summary>
@@ -38,19 +36,19 @@
           </div>
         </details>
         <input type="text" placeholder="Search for Item..." />
-        <button><img src="./assets/img/search.png" alt="search" /></button>
+        <button><img src="@/assets/img/search.png" alt="search" /></button>
       </form>
     </div>
     <div class="header__right">
       <a href="shoping_card.html" class="header__cart"
-        ><img src="./assets/img/cart.png" alt="cart"
+        ><img src="@/assets/img/cart.png" alt="cart"
       /></a>
       <!-- <input type="checkbox"  class="header__right_cart_img" id="cart_menu">
       <label for="cart_menu"><i class="fas fa-cart-arrow-down"></i></label> -->
-      <div class="header__right_cart" action="#">
+      <div class="header__right_cart">
         <div class="header__right_cart_box1">
-          <a hef="#" class="header__right_cart_img"
-            ><img src="./assets/img/product/1821.png"
+          <a href="#" class="header__right_cart_img"
+            ><img src="@/assets/img/product/1821.png"
           /></a>
           <div class="header__right_cart_content">
             <h3>Rebox Zane</h3>
@@ -61,7 +59,7 @@
         </div>
         <div class="header__right_cart_box2">
           <a class="header__right_cart_img"
-            ><img src="./assets/img/product/1830.png"
+            ><img src="@/assets/img/product/1830.png"
           /></a>
           <div class="header__right_cart_content">
             <h3>Rebox Zane</h3>
@@ -78,7 +76,7 @@
         <button class="header__right_cart_button2">Go to cart</button>
       </div>
       <!--        </details>-->
-      <div class="button" action="#">
+      <div class="button">
         <a href="#">My Account</a>
       </div>
     </div>

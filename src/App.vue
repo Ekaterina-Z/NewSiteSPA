@@ -1,15 +1,13 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
+  <site-header></site-header>
   <router-view />
   <site-footer></site-footer>
 </template>
 
 <script>
 import SiteFooter from "@/components/SiteFooter";
+import SiteHeader from "@/components/SiteHeader";
 export default {
-  components: { SiteFooter }
+  components: { SiteFooter, SiteHeader }
 };
 </script>

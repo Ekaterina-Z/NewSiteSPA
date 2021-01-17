@@ -84,7 +84,8 @@
   <nav class="nav center">
     <ul class="menu">
       <li class="menu__list">
-        <a href="index.html" class="menu__link">Home </a>
+<!--        <a href="index.html" class="menu__link">Home </a>-->
+        <router-link class="menu__link" to="/">Home</router-link>
       </li>
       <li class="menu__list">
         <a href="#" class="menu__link">Man </a>

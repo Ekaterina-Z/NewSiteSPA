@@ -7,6 +7,7 @@
   <!--   <site-footer></site-footer>-->
 
   <h1>I'm main page from main-route</h1>
+  <router-link to="/">Go Home</router-link>
 </template>
 
 <!-- Тут ты указываешь, что скрипт будет иметь синтаксис TypeScript. Если с ts не сталкивалась,-->

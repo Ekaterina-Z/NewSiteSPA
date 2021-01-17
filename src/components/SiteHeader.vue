@@ -84,10 +84,12 @@
   <nav class="nav center">
     <ul class="menu">
       <li class="menu__list">
-        <a href="index.html" class="menu__link">Home </a>
+        <!--        <a href="index.html" class="menu__link">Home </a>-->
+        <router-link class="menu__link" to="/">Home</router-link>
       </li>
       <li class="menu__list">
-        <a href="#" class="menu__link">Man </a>
+        <router-link class="menu__link" to="/products">Man</router-link>
+        <!--        <a href="#" class="menu__link">Man </a>-->
         <div class="drop">
           <div class="drop__flex">
             <h3 class="drop__h3">Man</h3>
@@ -134,7 +136,8 @@
         </div>
       </li>
       <li class="menu__list">
-        <a href="#" class="menu__link">Women </a>
+        <router-link class="menu__link" to="/products">Women</router-link>
+        <!--        <a href="#" class="menu__link">Women </a>-->
         <div class="drop">
           <div class="drop__flex">
             <h3 class="drop__h3">WOMEN</h3>
@@ -180,55 +183,56 @@
           </div>
         </div>
       </li>
-      <li class="menu__list">
-        <a href="#" class="menu__link">Kids </a>
-        <div class="drop">
-          <div class="drop__flex">
-            <h3 class="drop__h3">KIDS</h3>
-            <ul class="drop__ul">
-              <li><a href="#" class="drop__link">Dresses</a></li>
-              <li><a href="#" class="drop__link">Tops</a></li>
-              <li><a href="#" class="drop__link">Sweaters/Knits</a></li>
-              <li><a href="#" class="drop__link">Jackets/Coats</a></li>
-              <li><a href="#" class="drop__link">Blazers</a></li>
-              <li><a href="#" class="drop__link">Leggings/Pants</a></li>
-              <li><a href="#" class="drop__link">Skirts/Shorts</a></li>
-              <li><a href="#" class="drop__link">Accessories</a></li>
-            </ul>
-          </div>
-          <div class="drop__flex">
-            <h3 class="drop__h3">KIDS</h3>
-            <ul class="drop__ul">
-              <li><a href="#" class="drop__link">Dresses</a></li>
-              <li><a href="#" class="drop__link">Tops</a></li>
-              <li><a href="#" class="drop__link">Sweaters/Knits</a></li>
-              <li><a href="#" class="drop__link">Jackets/Coats</a></li>
-            </ul>
-            <h3 class="drop__h3">KIDS</h3>
-            <ul class="drop__ul">
-              <li><a href="#" class="drop__link">Dresses</a></li>
-              <li><a href="#" class="drop__link">Tops</a></li>
-              <li><a href="#" class="drop__link">Sweaters/Knits</a></li>
-            </ul>
-          </div>
-          <div class="drop__flex">
-            <h3 class="drop__h3">KIDS</h3>
-            <ul class="drop__ul">
-              <li><a href="#" class="drop__link">Dresses</a></li>
-              <li><a href="#" class="drop__link">Tops</a></li>
-              <li><a href="#" class="drop__link">Sweaters/Knits</a></li>
-              <li><a href="#" class="drop__link">Jackets/Coats</a></li>
-              <li>
-                <a href="#" class="drop__link">
-                  <h2 class="drop_sale">Super <br />sale!</h2></a
-                >
-              </li>
-            </ul>
-          </div>
+      <!--      <li class="menu__list">Kids </a>-->
+      <router-link class="menu__link" to="/products">Kids</router-link>
+      <div class="drop">
+        <div class="drop__flex">
+          <h3 class="drop__h3">KIDS</h3>
+          <ul class="drop__ul">
+            <li><a href="#" class="drop__link">Dresses</a></li>
+            <li><a href="#" class="drop__link">Tops</a></li>
+            <li><a href="#" class="drop__link">Sweaters/Knits</a></li>
+            <li><a href="#" class="drop__link">Jackets/Coats</a></li>
+            <li><a href="#" class="drop__link">Blazers</a></li>
+            <li><a href="#" class="drop__link">Leggings/Pants</a></li>
+            <li><a href="#" class="drop__link">Skirts/Shorts</a></li>
+            <li><a href="#" class="drop__link">Accessories</a></li>
+          </ul>
         </div>
-      </li>
+        <div class="drop__flex">
+          <h3 class="drop__h3">KIDS</h3>
+          <ul class="drop__ul">
+            <li><a href="#" class="drop__link">Dresses</a></li>
+            <li><a href="#" class="drop__link">Tops</a></li>
+            <li><a href="#" class="drop__link">Sweaters/Knits</a></li>
+            <li><a href="#" class="drop__link">Jackets/Coats</a></li>
+          </ul>
+          <h3 class="drop__h3">KIDS</h3>
+          <ul class="drop__ul">
+            <li><a href="#" class="drop__link">Dresses</a></li>
+            <li><a href="#" class="drop__link">Tops</a></li>
+            <li><a href="#" class="drop__link">Sweaters/Knits</a></li>
+          </ul>
+        </div>
+        <div class="drop__flex">
+          <h3 class="drop__h3">KIDS</h3>
+          <ul class="drop__ul">
+            <li><a href="#" class="drop__link">Dresses</a></li>
+            <li><a href="#" class="drop__link">Tops</a></li>
+            <li><a href="#" class="drop__link">Sweaters/Knits</a></li>
+            <li><a href="#" class="drop__link">Jackets/Coats</a></li>
+            <li>
+              <a href="#" class="drop__link">
+                <h2 class="drop_sale">Super <br />sale!</h2></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
       <li class="menu__list">
-        <a href="#" class="menu__link">Accoseriese</a>
+        <router-link class="menu__link" to="/products">Accoseriese</router-link>
+        <!--        <a href="#" class="menu__link">Accoseriese</a>-->
         <div class="drop drop__last">
           <div class="drop__flex">
             <h3 class="drop__h3">Accoseriese</h3>
@@ -275,7 +279,8 @@
         </div>
       </li>
       <li class="menu__list">
-        <a href="#" class="menu__link">Featured </a>
+        <!--        <a href="#" class="menu__link">Featured </a>-->
+        <router-link class="menu__link" to="/products">Featured</router-link>
         <div class="drop drop__last">
           <div class="drop__flex">
             <h3 class="drop__h3">Featured</h3>

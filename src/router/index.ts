@@ -1,6 +1,5 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
 import Home from "@/views/Home.vue";
-import MainProductCatalog from "@/views/MainProductCatalog.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -9,9 +8,10 @@ const routes: Array<RouteRecordRaw> = [
     component: Home
   },
   {
-    path: "/",
+    path: "/main",
     name: "MainProductCatalog",
-    component: MainProductCatalog
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/MainProductCatalog.vue")
   },
   {
     path: "/about",

@@ -28,8 +28,8 @@
 </template>
 
 <script>
-  import SiteSubscribe from "@/components/SiteSubscribe";
-  import CompanyInformation from "@/components/CompanyInformation";
+import SiteSubscribe from "@/components/SiteSubscribe";
+import CompanyInformation from "@/components/CompanyInformation";
 export default {
   name: "SiteFooter",
   computed: {
@@ -37,6 +37,6 @@ export default {
       return new Date().getFullYear();
     }
   },
-  components: {SiteSubscribe, CompanyInformation },
+  components: { SiteSubscribe, CompanyInformation }
 };
 </script>

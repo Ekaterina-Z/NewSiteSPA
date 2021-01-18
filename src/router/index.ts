@@ -8,10 +8,10 @@ const routes: Array<RouteRecordRaw> = [
     component: Home
   },
   {
-    path: "/main",
-    name: "MainProductCatalog",
+    path: "/products",
+    name: "ProductPage",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/MainProductCatalog.vue")
+      import(/* webpackChunkName: "products" */ "../views/MainProductCatalog.vue")
   },
   {
     path: "/about",
@@ -20,7 +20,13 @@ const routes: Array<RouteRecordRaw> = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue")
+      import(/* webpackChunkName: "about" */ "../views/ProductsPage.vue")
+  },
+  {
+    path: "/main",
+    name: "MainProductCatalog",
+    component: () =>
+      import(/* webpackChunkName: "main" */ "../views/MainProductCatalog.vue")
   }
 ];
 

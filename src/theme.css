@@ -2599,6 +2599,7 @@ details[open] > .bar_details::after {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+    margin-bottom: 10px;
 }
 
 .feature_box .option_content {

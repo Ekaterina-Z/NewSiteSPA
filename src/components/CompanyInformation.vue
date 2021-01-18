@@ -39,11 +39,11 @@
       <nav class="company">
         <ul>
           <li><h2 class="footer_h2">COMPANY</h2></li>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Shope</a></li>
+          <li><router-link to="/">Home</router-link></li>
+          <li><router-link to="/products">Shope</router-link></li>
           <li><a href="#">About</a></li>
           <li><a href="#">How it works</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><router-link to="/registration">Contact</router-link></li>
         </ul>
       </nav>
       <nav class="information">
@@ -59,11 +59,11 @@
       <nav class="category">
         <ul>
           <li><h2 class="footer_h2">SHOP CATEGORY</h2></li>
-          <li><a href="#">Men</a></li>
-          <li><a href="#">Women</a></li>
-          <li><a href="#">Child</a></li>
-          <li><a href="#">Apparel</a></li>
-          <li><a href="#">Brows All</a></li>
+          <li><router-link to="/products">Men</router-link></li>
+          <li><router-link to="/products">Women</router-link></li>
+          <li><router-link to="/products">Child</router-link></li>
+          <li><router-link to="/products">Apparel</router-link></li>
+          <li><router-link to="/products">Brows All</router-link></li>
         </ul>
       </nav>
     </article>

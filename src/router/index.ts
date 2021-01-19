@@ -10,36 +10,32 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: "/products",
     name: "ProductsPage",
-    component: () =>
-      import(/* webpackChunkName: "products" */ "../views/ProductsPage.vue")
+    component: () => import("../views/ProductsPage.vue")
   },
   {
     path: "/product",
     name: "ProductDetails",
-    component: () =>
-      import(/* webpackChunkName: "products" */ "../views/ProductDetails.vue")
+    component: () => import("../views/ProductDetails.vue")
   },
   {
     path: "/cart",
     name: "Cart",
-    component: () =>
-      import(/* webpackChunkName: "products" */ "../views/Cart.vue")
+    component: () => import("../views/Cart.vue")
   },
   {
     path: "/registration",
     name: "Registration",
-    component: () =>
-      import(/* webpackChunkName: "products" */ "../views/Registration.vue")
+    component: () => import("../views/Registration.vue")
   },
 
   {
-    path: "/about",
-    name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue")
+    path: "/404",
+    name: "PageNotFound",
+    component: () => import("../views/PageNotFound.vue")
+  },
+  {
+    path: "/:catchAll(.*)",
+    redirect: "/404"
   }
 ];
 

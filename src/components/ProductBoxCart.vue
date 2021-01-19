@@ -21,5 +21,3 @@ export default {
   name: "ProductBoxCart"
 };
 </script>
-
-<style scoped></style>

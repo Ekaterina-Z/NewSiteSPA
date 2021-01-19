@@ -5,7 +5,7 @@
 
   <!--  <site-header></site-header>-->
   <!--   <site-footer></site-footer>-->
-  <product-page-nav-menu></product-page-nav-menu>
+  <arrivals-nav-menu></arrivals-nav-menu>
   <div class="center catalog_product">
     <product-left-side-bar></product-left-side-bar>
     <div class="filter_right">
@@ -21,20 +21,20 @@
 <!--<script lang="ts">-->
 <script lang="ts">
 import { defineComponent } from "vue";
-import ProductPageNavMenu from "@/components/ProductPageNavMenu.vue";
 import CatalogBlock from "@/components/CatalogBlock.vue";
 import ProductLeftSideBar from "@/components/ProductLeftSideBar.vue";
 import ProductFilter from "@/components/ProductFilter.vue";
 import ProductOffers from "@/components/ProductOffers.vue";
+import ArrivalsNavMenu from "@/components/ArrivalsNavMenu.vue";
 
 export default defineComponent({
   name: "ProductPage",
   components: {
+    ArrivalsNavMenu,
     ProductOffers,
     ProductFilter,
     ProductLeftSideBar,
-    CatalogBlock,
-    ProductPageNavMenu
+    CatalogBlock
   }
 });
 </script>

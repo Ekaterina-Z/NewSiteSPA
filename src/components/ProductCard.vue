@@ -1,11 +1,12 @@
 <template>
   <div class="product" id="">
-    <a href="shoping_card.html"
-      ><img
+    <router-link to="/product">
+      <img
         class="product__img"
         src="@/assets/img/product/product-1.png"
         alt="product 1"
-    /></a>
+      />
+    </router-link>
 
     <div class="product__content">
       <a href="#" class="product__name">Mango People T-shirt</a>

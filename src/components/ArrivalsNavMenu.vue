@@ -5,9 +5,13 @@
       <li class="menu__list">
         <router-link to="/" class="menu__link">Home/ </router-link>
       </li>
-      <li class="menu__list"><a href="#" class="menu__link">Man/ </a></li>
       <li class="menu__list">
-        <a href="#" class="menu__link">New Arrivals </a>
+        <router-link to="/products" class="menu__link">Man / </router-link>
+      </li>
+      <li class="menu__list">
+        <router-link to="/products" class="menu__link"
+          >New Arrivals
+        </router-link>
       </li>
     </ul>
   </nav>
@@ -15,7 +19,7 @@
 
 <script>
 export default {
-  name: "ProductPageNavMenu"
+  name: "ArrivalsNavMenu"
 };
 </script>
 

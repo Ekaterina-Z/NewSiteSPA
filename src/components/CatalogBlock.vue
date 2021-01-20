@@ -125,65 +125,30 @@
 
 <script>
 import ProductCard from "@/components/ProductCard.vue";
+import Api from "@/services/api";
 export default {
   name: "CatalogBlock",
   components: { ProductCard },
-  data: () => ({
-    products: [
-      {
-        title: "Product",
-        productDetails: [
-          {
-            id: "1",
-            product_name: "Mango People T-shirt",
-            product_price: 52,
-            product_img_url: ".../assets/img/product/product-1.png"
-          },
-          {
-            id: "2",
-            product_name: " People T-shirt",
-            product_price: 45,
-            product_img_url: ".../assets/img/product/product-2.png"
-          },
-          {
-            id: "3",
-            product_name: " Mango People T-shirt",
-            product_price: 40,
-            product_img_url: ".../assets/img/product/product-3.png"
-          },
-          {
-            id: "4",
-            product_name: " Mango People T-shirt",
-            product_price: 40,
-            product_img_url: ".../assets/img/product/product-4.png"
-          },
-          {
-            id: "5",
-            product_name: " Mango People T-shirt",
-            product_price: 30,
-            product_img_url: ".../assets/img/product/product-5.png"
-          },
-          {
-            id: "6",
-            product_name: " People T-shirt",
-            product_price: 50,
-            product_img_url: ".../assets/img/product/product-6.png"
-          },
-          {
-            id: "7",
-            product_name: " Mango People T-shirt",
-            product_price: 40,
-            product_img_url: ".../assets/img/product/product-7.png"
-          },
-          {
-            id: "8",
-            product_name: " Mango People T-shirt",
-            product_price: 45,
-            product_img_url: ".../assets/img/product/product-8.png"
-          }
-        ]
+  data() {
+    return {
+      products: []
+    };
+  },
+  methods: {
+    async loadProducts() {
+      try {
+        const { data } = await Api.getProducts();
+        if (data) {
+          this.products = data
+          console.log(this.products)
+        }
+      } catch(err) {
+        console.log("error: ", err)
       }
-    ]
-  })
+    }
+  },
+  mounted() {
+    this.loadProducts();
+  }
 };
 </script>

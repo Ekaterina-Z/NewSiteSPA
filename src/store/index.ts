@@ -18,7 +18,7 @@ export default createStore({
   },
   actions: {
     setCart: (context, payload: typeof UserCart) => {
-      context.commit("setCart", payload);//*  Здесь мы получаем данные из корзины после обновления state?
+      context.commit("setCart", payload); //*  Здесь мы получаем данные из корзины после обновления state?
     }
   },
   modules: {}

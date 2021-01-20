@@ -1,5 +1,5 @@
 <template>
-  <div class="product" id="">
+  <div class="product" id="product">
     <router-link to="/product">
       <img
         class="product__img"
@@ -9,7 +9,9 @@
     </router-link>
 
     <div class="product__content">
-      <a href="#" class="product__name">Mango People T-shirt</a>
+      <router-link to="/product" class="product__name"
+        >Mango People T-shirt</router-link
+      >
       <div class="product__price">$52.00</div>
     </div>
     <a class="product__add" href="#">Add to Cart</a>

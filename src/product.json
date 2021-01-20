@@ -1,0 +1,10 @@
+product: [
+  {id:"1", product_name:"Mango People T-shirt", product_price: 52, product_img_url:'.../assets/img/product/product-1.png'},
+  {id:"2", product_name:" People T-shirt", product_price: 45, product_img_url:'.../assets/img/product/product-2.png'},
+  {id:"3", product_name:" Mango People T-shirt", product_price: 40, product_img_url:'.../assets/img/product/product-3.png'},
+  {id:"4", product_name:" Mango People T-shirt", product_price: 40, product_img_url:'.../assets/img/product/product-4.png'},
+  {id:"5", product_name:" Mango People T-shirt", product_price: 30, product_img_url:'.../assets/img/product/product-5.png'},
+  {id:"6", product_name:" People T-shirt", product_price: 50, product_img_url:'.../assets/img/product/product-6.png'},
+  {id:"7", product_name:" Mango People T-shirt", product_price: 40, product_img_url:'.../assets/img/product/product-7.png'},
+  {id:"8", product_name:" Mango People T-shirt", product_price: 45, product_img_url:'.../assets/img/product/product-8.png'}
+]

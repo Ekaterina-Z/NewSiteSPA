@@ -1,11 +1,7 @@
 <template>
   <div class="product">
     <router-link to="/product">
-      <img
-        class="product__img"
-        :src="imageURL"
-        alt="img"
-      />
+      <img class="product__img" :src="imageURL" alt="img" />
     </router-link>
     <div class="product__content">
       <router-link to="/product" class="product__name">{{ name }}</router-link>

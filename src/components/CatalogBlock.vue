@@ -1,126 +1,21 @@
 <template>
-  <div>
+  <div v-if="products">
     <section class="center product-box">
-      <product-card></product-card>
-      <product-card></product-card>
-      <product-card></product-card>
-      <product-card></product-card>
-      <product-card></product-card>
-      <product-card></product-card>
-      <product-card></product-card>
-      <product-card></product-card>
-      <!--      <div class="product">-->
-      <!--        <router-link to="/product"-->
-      <!--          ><img-->
-      <!--            class="product__img"-->
-      <!--            src="@/assets/img/product/product-2.png"-->
-      <!--            alt="product 2"-->
-      <!--          />-->
-      <!--        </router-link>-->
-      <!--        <div class="product__content">-->
-      <!--          <router-link to="/product" class="product__name"-->
-      <!--            >Mango People T-shirt</router-link-->
-      <!--          >-->
-      <!--          <div class="product__price">$52.00</div>-->
-      <!--        </div>-->
-      <!--        <a class="product__add" href="#">Add to Cart</a>-->
-      <!--      </div>-->
-      <!--      <div class="product">-->
-      <!--        <router-link to="/product">-->
-      <!--          <img-->
-      <!--            class="product__img"-->
-      <!--            src="@/assets/img/product/product-3.png"-->
-      <!--            alt="product 3"-->
-      <!--        /></router-link>-->
-      <!--        <div class="product__content">-->
-      <!--          <router-link to="/product" class="product__name"-->
-      <!--            >Mango People T-shirt</router-link-->
-      <!--          >-->
-      <!--          <div class="product__price">$52.00</div>-->
-      <!--        </div>-->
-      <!--        <a class="product__add" href="#">Add to Cart</a>-->
-      <!--      </div>-->
-      <!--      <div class="product">-->
-      <!--        <router-link to="/product">-->
-      <!--          <img-->
-      <!--            class="product__img"-->
-      <!--            src="@/assets/img/product/product-4.png"-->
-      <!--            alt="product 4"-->
-      <!--          />-->
-      <!--        </router-link>-->
-      <!--        <div class="product__content">-->
-      <!--          <router-link to="/product" class="product__name"-->
-      <!--            >Mango People T-shirt</router-link-->
-      <!--          >-->
-      <!--          <div class="product__price">$52.00</div>-->
-      <!--        </div>-->
-      <!--        <a class="product__add" href="#">Add to Cart</a>-->
-      <!--      </div>-->
-      <!--      <div class="product">-->
-      <!--        <router-link to="/product"-->
-      <!--          ><img-->
-      <!--            class="product__img"-->
-      <!--            src="@/assets/img/product/product-5.png"-->
-      <!--            alt="product 5"-->
-      <!--        /></router-link>-->
-      <!--        <div class="product__content">-->
-      <!--          <router-link to="/product" class="product__name"-->
-      <!--            >Mango People T-shirt</router-link-->
-      <!--          >-->
-      <!--          <div class="product__price">$52.00</div>-->
-      <!--        </div>-->
-      <!--        <a class="product__add" href="#">Add to Cart</a>-->
-      <!--      </div>-->
-      <!--      <div class="product">-->
-      <!--        <router-link to="/product"-->
-      <!--          ><img-->
-      <!--            class="product__img"-->
-      <!--            src="@/assets/img/product/product-6.png"-->
-      <!--            alt="product 6"-->
-      <!--        /></router-link>-->
-      <!--        <div class="product__content">-->
-      <!--          <router-link to="/product" class="product__name"-->
-      <!--            >Mango People T-shirt</router-link-->
-      <!--          >-->
-      <!--          <div class="product__price">$52.00</div>-->
-      <!--        </div>-->
-      <!--        <a class="product__add" href="#">Add to Cart</a>-->
-      <!--      </div>-->
-      <!--      <div class="product">-->
-      <!--        <router-link to="/product"-->
-      <!--          ><img-->
-      <!--            class="product__img"-->
-      <!--            src="@/assets/img/product/product-7.png"-->
-      <!--            alt="product 7"-->
-      <!--        /></router-link>-->
-      <!--        <div class="product__content">-->
-      <!--          <router-link to="/product" class="product__name"-->
-      <!--            >Mango People T-shirt</router-link-->
-      <!--          >-->
-      <!--          <div class="product__price">$52.00</div>-->
-      <!--        </div>-->
-      <!--        <a class="product__add" href="#">Add to Cart</a>-->
-      <!--      </div>-->
-      <!--      <div class="product">-->
-      <!--        <router-link to="/product"-->
-      <!--          ><img-->
-      <!--            class="product__img"-->
-      <!--            src="@/assets/img/product/product-8.png"-->
-      <!--            alt="product 8"-->
-      <!--        /></router-link>-->
-      <!--        <div class="product__content">-->
-      <!--          <router-link to="/product" class="product__name"-->
-      <!--            >Mango People T-shirt</router-link-->
-      <!--          >-->
-      <!--          <div class="product__price">$52.00</div>-->
-      <!--        </div>-->
-      <!--        <a class="product__add" href n="#">Add to Cart</a>-->
-      <!--      </div>-->
+      <product-card
+        v-for="product in products"
+        :id="product.id"
+        :title="product.name"
+        :image="product.src"
+        :price="product.price"
+        :key="product.id"
+        @add="addToCart"
+      ></product-card>
       <router-link class="button" to="/products"
         >Browse All Products</router-link
       >
     </section>
   </div>
+  <h3 v-else>No products found</h3>
 </template>
 
 <script>
@@ -135,15 +30,21 @@ export default {
     };
   },
   methods: {
+    // Метод для обработки получаемых через emit - id продукта
+    addToCart(id) {
+      console.log(
+        "Was added: ",
+        this.products.find(product => product.id === id)
+      );
+    },
     async loadProducts() {
       try {
         const { data } = await Api.getProducts();
         if (data) {
-          this.products = data
-          console.log(this.products)
+          this.products = data.product;
         }
-      } catch(err) {
-        console.log("error: ", err)
+      } catch (err) {
+        console.log("error: ", err);
       }
     }
   },

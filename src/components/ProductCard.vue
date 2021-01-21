@@ -1,22 +1,28 @@
 <template>
-  <div class="product" id="product">
+  <div class="product">
     <router-link to="/product">
-      <img class="product__img"
-           :src="image"
-           alt="img" />
+      <img
+        class="product__img"
+        :src="imageURL"
+        alt="img"
+      />
     </router-link>
     <div class="product__content">
       <router-link to="/product" class="product__name">{{ name }}</router-link>
       <div class="product__price">$ {{ price }}</div>
     </div>
-    <a class="product__add" href="#">Add to Cart</a>
+    <a class="product__add" @click.prevent="$emit('add', id)">Add to Cart</a>
   </div>
 </template>
-
 <script>
 export default {
   name: "ProductCard",
+  emits: ["add"],
   props: {
+    id: {
+      type: String,
+      required: true
+    },
     name: {
       type: String,
       require: true
@@ -28,7 +34,13 @@ export default {
     price: {
       type: Number,
       require: true
-      // validator: value => (value = 0)
+      // validator: value => (value > 0)
+    }
+  },
+  computed: {
+    imageURL() {
+      // тут у нас базовый путь до папки с картинками + путь до конкретного файла
+      return require(`@/assets/img/${this.image}`);
     }
   }
 };

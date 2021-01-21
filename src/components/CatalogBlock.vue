@@ -1,26 +1,21 @@
 <template>
-  <div>
+  <div v-if="products">
     <section class="center product-box">
       <product-card
         v-for="product in products"
-        :title="product.product_name"
-        :image="product.product_image_url"
-        :price="product.product_price"
+        :id="product.id"
+        :title="product.name"
+        :image="product.src"
+        :price="product.price"
         :key="product.id"
+        @add="addToCart"
       ></product-card>
-      <!--      <product-card></product-card>-->
-      <!--      <product-card></product-card>-->
-      <!--      <product-card></product-card>-->
-      <!--      <product-card></product-card>-->
-      <!--      <product-card></product-card>-->
-      <!--      <product-card></product-card>-->
-      <!--      <product-card></product-card>-->
-
       <router-link class="button" to="/products"
         >Browse All Products</router-link
       >
     </section>
   </div>
+  <h3 v-else>No products found</h3>
 </template>
 
 <script>
@@ -35,12 +30,18 @@ export default {
     };
   },
   methods: {
+    // Метод для обработки получаемых через emit - id продукта
+    addToCart(id) {
+      console.log(
+        "Was added: ",
+        this.products.find(product => product.id === id)
+      );
+    },
     async loadProducts() {
       try {
         const { data } = await Api.getProducts();
         if (data) {
-          this.products = data.products;
-          console.log(this.products);
+          this.products = data.product;
         }
       } catch (err) {
         console.log("error: ", err);

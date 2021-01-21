@@ -1,5 +1,5 @@
 <template>
-  <div class="product">
+  <div class="product" id="product">
     <router-link to="/product">
       <img class="product__img" :src="imageURL" alt="img" />
     </router-link>
@@ -30,7 +30,7 @@ export default {
     price: {
       type: Number,
       require: true
-      // validator: value => (value > 0)
+      //validator: value => value > 0
     }
   },
   computed: {

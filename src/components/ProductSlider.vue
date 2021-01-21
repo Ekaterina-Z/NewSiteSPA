@@ -66,7 +66,7 @@
         </form>
       </section>
       <button class="slider__product_box_chose_but">
-        <img src="@/assets/img/2587.png" />Add to Cart
+        <img @click.prevent="$emit('add', id)" />Add to Cart
       </button>
     </section>
   </div>

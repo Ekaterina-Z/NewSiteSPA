@@ -4,7 +4,7 @@
       <product-card
         v-for="product in products"
         :id="product.id"
-        :title="product.name"
+        :name="product.name"
         :image="product.src"
         :price="product.price"
         :key="product.id"

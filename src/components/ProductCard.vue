@@ -29,8 +29,8 @@ export default {
     },
     price: {
       type: Number,
-      require: true
-      //validator: value => value > 0
+      require: true,
+      validator: value => value > 0
     }
   },
   computed: {

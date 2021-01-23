@@ -1,5 +1,5 @@
 <template>
-  <section class="slider center">
+  <section class="slider center" >
     <ul>
       <li id="slider-1" class="slide">
         <img src="@/assets/img/product/2490.png" />
@@ -74,7 +74,7 @@
 
 <script>
 export default {
-  name: "ProductSlider"
+  name: "ProductSlider",
 };
 </script>
 

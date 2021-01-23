@@ -8,12 +8,10 @@
 </template>
 
 <script>
-import ProductCard from "./ProductCard";
 import CatalogBlock from "./CatalogBlock";
 export default {
   name: "ProductsForPriority",
-  components: {CatalogBlock  },
-
+  components: { CatalogBlock }
 };
 </script>
 

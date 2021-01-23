@@ -101,8 +101,6 @@
               :key="index"
               >{{ choose }}</option
             >
-            <!--            <option value="value2" selected>Size</option>-->
-            <!--            <option value="value3">Brend</option>-->
           </select>
         </p>
       </form>

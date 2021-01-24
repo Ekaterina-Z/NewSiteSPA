@@ -2,7 +2,11 @@
   <header class="header center">
     <div class="header__left">
       <router-link to="/" class="logo">
-        <img class="logo__img" src="@/assets/img/logo.png" alt="logo" />
+        <img
+          class="logo__img"
+          src="@/assets/img/logo.png"
+          alt="logo"
+        />
         BRAN
         <span>D</span>
       </router-link>

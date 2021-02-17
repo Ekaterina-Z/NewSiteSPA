@@ -1,20 +1,16 @@
 <template>
-  <div v-if="products">
-    <section class="center product-box">
-      <product-card
-        v-for="product in products"
-        :id="product.id"
-        :title="product.name"
-        :image="product.src"
-        :price="product.price"
-        :key="product.id"
-        @add="addToCart"
-      ></product-card>
-      <router-link class="button" to="/products"
-        >Browse All Products</router-link
-      >
-    </section>
-  </div>
+  <section v-if="products" class="center product-box">
+    <product-card
+      v-for="product in products"
+      :id="product.id"
+      :name="product.name"
+      :image="product.src"
+      :price="product.price"
+      :key="product.id"
+      @add="addToCart"
+    ></product-card>
+    <router-link class="button" to="/products">Browse All Products</router-link>
+  </section>
   <h3 v-else>No products found</h3>
 </template>
 
